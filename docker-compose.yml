@@ -1,0 +1,12 @@
+motioneye: 
+  container_name: motioneye 
+  image: ccrisan/motioneye:master-amd64
+  restart: always 
+  volumes: 
+    - /etc/localtime:/etc/localtime 
+    - /etc/motioneye:/etc/motioneye 
+    - /var/lib/motioneye:/var/lib/motioneye 
+  ports: 
+    - 8765:8765 
+    - 18081:8081
+    - 18082:8082
